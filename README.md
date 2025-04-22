@@ -12,6 +12,17 @@ This pipeline performs full germline/somatic variant analysis for cancer samples
 - HTML + PDF reporting
 - LIS-ready output
 
+📦 Modules:
+Nextflow pipeline: Oncology-NGS-pipeline.nf
+
+Dockerfile: With FastQC, BWA, GATK, CNVkit, STAR-Fusion, etc.
+
+RMarkdown report: report_template.Rmd with quality plots and mutation summaries
+
+AWS Batch + CloudWatch integration: Includes aws_batch.config + job template
+
+LIS output formatter: Python script for JSON/PDF report export
+
 ## 🚀 Quickstart
 ```bash
 nextflow run main.nf -profile docker
